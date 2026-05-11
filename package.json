@@ -16,7 +16,8 @@
     "migrate": "node server/migrate.mjs",
     "import": "node server/import-youtube.mjs --handle @TheOrganicChemistryTutor",
     "import:limit": "node server/import-youtube.mjs --handle @TheOrganicChemistryTutor --limit 50",
-    "durations": "node server/backfill-durations.mjs"
+    "durations": "node server/backfill-durations.mjs",
+    "supabase:push": "node server/push-supabase.mjs"
   },
   "dependencies": {
     "express": "^4.19.2",
