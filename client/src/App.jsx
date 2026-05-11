@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Search, Menu, X, BookOpen, Clock, Play, Camera, Loader2, ChevronRight, ChevronDown, CirclePlay, ExternalLink, Layers, Cpu, Atom, FunctionSquare, Bookmark, BookmarkCheck, ListVideo, FolderOpen, SlidersHorizontal, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:3001/api';
+const API_BASE = import.meta.env.VITE_API_BASE || (import.meta.env.PROD ? '/api' : 'http://localhost:3001/api');
 const DEFAULT_PLAYER_VOLUME = 90;
 const WATCH_LATER_KEY = 'hi-watch-later-videos';
 const THEME_KEY = 'hi-interface-theme';

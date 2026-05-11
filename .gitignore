@@ -9,6 +9,7 @@ chrome-profile-test*/
 chrome-profile*/
 chrome-cdp-profile*/
 data/*.sqlite
+!data/videos.sqlite
 data/*.sqlite-shm
 data/*.sqlite-wal
 .env
