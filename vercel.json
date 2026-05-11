@@ -1,5 +1,10 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "client/dist",
-  "installCommand": "npm install && npm install --prefix client"
+  "installCommand": "npm install && npm install --prefix client",
+  "functions": {
+    "api/**/*.mjs": {
+      "includeFiles": "data/videos.sqlite"
+    }
+  }
 }
