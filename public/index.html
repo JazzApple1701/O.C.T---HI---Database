@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Organic Chemistry Tutor Video DB</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Local video database</p>
+          <h1>The Organic Chemistry Tutor</h1>
+        </div>
+        <div class="stats" aria-live="polite">
+          <div>
+            <span id="videoCount">0</span>
+            <small>Videos</small>
+          </div>
+          <div>
+            <span id="dbSize">0 KB</span>
+            <small>DB size</small>
+          </div>
+        </div>
+      </header>
+
+      <section class="toolbar" aria-label="Catalog controls">
+        <label class="field search-field">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="acid base, calculus, SN1...">
+        </label>
+
+        <label class="field">
+          <span>Topic</span>
+          <select id="topicSelect">
+            <option value="">All topics</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Sort</span>
+          <select id="sortSelect">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="title_asc">Title A-Z</option>
+            <option value="title_desc">Title Z-A</option>
+            <option value="topic_asc">Topic A-Z</option>
+            <option value="channel_order">Channel order</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="content-grid">
+        <section class="results-panel" aria-label="Videos">
+          <div class="result-meta">
+            <span id="resultCount">0 results</span>
+            <div class="pager">
+              <button id="prevButton" type="button">Prev</button>
+              <span id="pageLabel">Page 1</span>
+              <button id="nextButton" type="button">Next</button>
+            </div>
+          </div>
+          <div id="emptyState" class="empty-state" hidden>
+            <h2>No videos in the database yet</h2>
+            <p>Run the importer after adding a YouTube Data API key.</p>
+          </div>
+          <div id="videoList" class="video-list"></div>
+        </section>
+
+        <aside class="player-panel" aria-label="Selected video">
+          <div class="player-frame">
+            <div id="playerStatus" class="player-status">
+              <span>Loading player...</span>
+            </div>
+            <iframe
+              id="player"
+              title="YouTube video player"
+              src=""
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="eager"
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+          <div class="selected-copy">
+            <p id="selectedTopic" class="topic-pill">No selection</p>
+            <h2 id="selectedTitle">Select a video</h2>
+            <p id="selectedDate"></p>
+            <a id="selectedLink" href="#" target="_blank" rel="noreferrer" hidden>Open on YouTube</a>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

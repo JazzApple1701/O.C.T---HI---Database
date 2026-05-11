@@ -1,0 +1,15 @@
+node_modules/
+client/node_modules/
+client/dist/
+client*.log
+*.dev.log
+screenshots/
+.chrome-test-profile/
+chrome-profile-test*/
+chrome-profile*/
+chrome-cdp-profile*/
+data/*.sqlite
+data/*.sqlite-shm
+data/*.sqlite-wal
+.env
+server*.log
